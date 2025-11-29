@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Profile Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .profile-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      text-align: center;
+      padding: 30px;
+      width: 300px;
+      transition: 0.3s;
+    }
+    .profile-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid #4CAF50;
+    }
+    .profile-card h2 {
+      margin: 10px 0;
+      color: #333;
+    }
+    .profile-card p {
+      color: #666;
+      font-size: 14px;
+    }
+    .btn {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: 0.2s;
+    }
+    .btn:hover {
+      background: #45a049;
+    }
+    .extra-info {
+      margin-top: 15px;
+      display: none;
+      font-size: 14px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile-card">
+    <img src="Profile_pic.jpg" alt="Profile Picture" onerror="this.onerror=null; this.src='https://via.placeholder.com/120?text=No+Image';">
+    <h2>Pranav Paralkar</h2>
+    <p>Game Developer | Tech Enthusiast</p>
+    <button class="btn" onclick="toggleInfo()">Show More</button>
+    <div class="extra-info" id="extraInfo">
+      <p>📍 Location: Pune, India</p>
+      <p>💻 Skills: C++, Java, Flutter, Node.js</p>
+      <p>🎮 Passionate about Game Development</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleInfo() {
+      const info = document.getElementById("extraInfo");
+      if (info.style.display === "block") {
+        info.style.display = "none";
+      } else {
+        info.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
